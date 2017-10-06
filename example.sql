@@ -1,2 +1,2 @@
-insert into loginserviceprovider values('github');
-insert into userlist values('github','userid',concat(md5(concat('githubuserid',sha2('githubuserid',256))),sha2('githubuserid',512)));
+insert into loginserviceprovider(provider)  (select a.provider from (select "github" as provider union select "test" as provider) as a where a.provider not in (select provider from loginserviceprovider));
+#insert into userlist values('github','userid',concat(md5(concat('githubuserid',sha2('githubuserid',256))),sha2('githubuserid',512)));
