@@ -14,4 +14,5 @@ grant SELECT, SHOW VIEW, INDEX privileges on waproj.* to 'webappro'@'localhost' 
 grant SELECT, INSERT, UPDATE, DROP privileges on waproj.* to 'webappuser'@'localhost' IDENTIFIED BY 'warw';
 flush privileges;
 use waproj;
-#mysql의 커멘드에 접속후 오른쪽 따옴표 사이에 있는 커멘트 실행 "source <sql파일의 절대경로>"
+#mysql의 커멘드에 접속후 오른쪽 따옴표 사이에 있는 커멘트 실행 "source <sql파일의 절대경로>" 혹은 "\. <sql파일의 절대경로>"
+#위의 커멘드가 제대로 적용안되면 1줄씩 수동적용
