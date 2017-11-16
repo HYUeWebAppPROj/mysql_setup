@@ -22,7 +22,8 @@ filemime varchar(30) not null,content text(16384)  ,
 primary key(stor_sess,course_id,course_page),
 check(course_page>=0 ),check(passed between 0 and 1),
 foreign key(stor_sess) references userlist(storage_session_id) on delete cascade on update cascade,
-foreign key(course_id) references course_list(course_id) on delete cascade on update cascade
+foreign key(course_id) references course_list(course_id) on delete cascade on update cascade,
+foreign key(filemime) references supported_mime_type_list(mime_type) on delete cascade on update cascade
 );
 /*
 create table if not exists user_completed_course_list(
